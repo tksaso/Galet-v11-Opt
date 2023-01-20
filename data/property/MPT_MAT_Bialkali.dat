@@ -1,0 +1,7 @@
+#NCONSTPROPERTY       0
+#NPARAMETER           3
+#NENTRIES             3
+#PhotonEnergy[eV]    RINDEX    ABSLENGTH
+1.20               1.560     200.          
+3.1                1.470     200.          
+6.5                1.450     200.

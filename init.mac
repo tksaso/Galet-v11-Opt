@@ -1,0 +1,38 @@
+# Macro file for the initialization of example B4
+# in interactive session
+#
+# Set some default verbose
+#
+/control/verbose 2
+/control/saveHistory
+/run/verbose 2
+#
+# Change the default number of threads (in multi-threaded mode)
+#/run/numberOfThreads 4
+#
+# material definition
+/control/execute  material.mac
+#
+# physics list
+/control/execute phys.mac
+#
+# Initialize kernel
+/run/initialize
+#
+/gps/particle e-
+/gps/position 0. 0. 10. cm
+/gps/direction 0 0 -1
+/gps/energy 300 keV
+#
+#
+/process/optical/defaults/scintillation/setByParticleType true
+/Galet/det/set/ScintiMaterial  G4_WATER  ./data/property/SCINTI_ELEC_YIELD.dat
+/Galet/det/set/OptMaterial  G4_WATER     ./data/property/MPT_SCINTI_UltimaGold.dat
+#
+/Galet/det/set/OptMaterial  G4_AIR       ./data/property/MPT_MAT_Air.dat
+##/Galet/det/set/OptMaterial  G4_GLASS_PLATE ./data/property/MPT_MAT_GLASS.dat
+#
+/Galet/det/set/OptBorder  WorldPV ScintiPV ./data/property/OPT_BORDER_WORLDxLS.dat
+#
+/Galet/det/set/OptSkin   AlLV  ./data/property/OPT_SKIN_ChamberMirror.dat
+##

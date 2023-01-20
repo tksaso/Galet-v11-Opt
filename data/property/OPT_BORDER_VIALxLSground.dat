@@ -1,0 +1,5 @@
+#NOPTPROPERTY         4
+MODEL                unified
+FINISH               ground
+TYPE                 dielectric_dielectric
+SIGMAALPHA           0.05
